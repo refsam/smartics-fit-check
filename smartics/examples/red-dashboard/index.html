@@ -1,0 +1,23 @@
+<?php
+// Contoh uji: SEMUA kredensial di bawah ini PALSU.
+$db = new mysqli("localhost", "root", "palsu123", "pabrik");
+?>
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="utf-8">
+  <title>Demo Pabrik - Red</title>
+</head>
+<body>
+  <h1>CCTV dan Laporan</h1>
+  <video src="rtsp://admin:contoh123@192.168.1.10:554/stream1" autoplay></video>
+  <table id="laporan"></table>
+  <script>
+    const API_KEY = "DEMO-FAKE-KEY-0000";
+    const conn = mysql.createConnection("Server=192.168.1.20;Database=pabrik;User Id=sa;Password=palsu123;");
+    conn.query("SELECT * FROM produksi WHERE tanggal = CURDATE()", function (err, rows) {
+      document.getElementById("laporan").innerHTML = rows.map(r => "<tr><td>" + r.nama + "</td></tr>").join("");
+    });
+  </script>
+</body>
+</html>

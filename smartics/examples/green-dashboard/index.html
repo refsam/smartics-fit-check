@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="utf-8">
+  <title>Demo Pabrik - Green</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="lib/chart.min.js"></script>
+</head>
+<body>
+  <header><h1>Monitoring Tangki</h1><span id="user"></span></header>
+  <form id="login" hidden>
+    <input id="u" placeholder="User">
+    <input id="p" type="password" placeholder="Password">
+    <button type="submit">Masuk</button>
+  </form>
+  <main>
+    <div class="card"><h2>Level</h2><div id="level">-</div></div>
+    <div class="card"><h2>Suhu</h2><div id="temp">-</div></div>
+    <canvas id="trend" width="600" height="200"></canvas>
+  </main>
+  <script src="app.js"></script>
+</body>
+</html>
